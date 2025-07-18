@@ -1,0 +1,78 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --button-bg: #4f46e5;
+  --button-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card-bg: rgba(30, 30, 30, 0.9);
+  --button-bg: #60a5fa;
+  --button-text: #000000;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.theme-toggle {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
